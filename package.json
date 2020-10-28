@@ -8,12 +8,13 @@
     "connect-flash": "^0.1.1",
     "express": "^4.17.1",
     "express-handlebars": "^5.1.0",
-    "handlebars": "^4.7.6",
     "express-session": "^1.17.1",
+    "handlebars": "^4.7.6",
     "mongodb": "^3.6.0",
     "mongoose": "^5.9.28",
     "mysql2": "^2.1.0",
-    "sequelize": "^6.3.4"
+    "sequelize": "^6.3.4",
+    "serve": "^11.3.2"
   },
   "devDependencies": {},
   "scripts": {
