@@ -84,14 +84,14 @@ router.get('/task/edit/:id',(req,res)=>{
     
 })
 
-router.get('/show/:id',(req,res)=>{
+/*router.get('/show/:id',(req,res)=>{
     Task.findOne({_id:req.params.id}).lean().then((tasks)=>{
         res.render('taskShow',{tasks:tasks})
     }).catch((error)=>{
         req.flash("error_msg","Erro ao encontar a tarefa pretendida")
         res.redirect('/')
     })
-})
+})*/
 
 
 router.post('/task/edit',(req,res)=>{

@@ -83,18 +83,15 @@ router.get('/task/edit/:id', function (req, res) {
     res.redirect('/admin/task');
   });
 });
-router.get('/show/:id', function (req, res) {
-  Task.findOne({
-    _id: req.params.id
-  }).lean().then(function (tasks) {
-    res.render('taskShow', {
-      tasks: tasks
-    });
-  })["catch"](function (error) {
-    req.flash("error_msg", "Erro ao encontar a tarefa pretendida");
-    res.redirect('/');
-  });
-});
+/*router.get('/show/:id',(req,res)=>{
+    Task.findOne({_id:req.params.id}).lean().then((tasks)=>{
+        res.render('taskShow',{tasks:tasks})
+    }).catch((error)=>{
+        req.flash("error_msg","Erro ao encontar a tarefa pretendida")
+        res.redirect('/')
+    })
+})*/
+
 router.post('/task/edit', function (req, res) {
   Task.findById(req.body.id).then(function (tasks) {
     console.log();
