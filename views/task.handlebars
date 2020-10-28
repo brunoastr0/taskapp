@@ -1,0 +1,28 @@
+<h2 class="mt-4 text-white">Lista de Tasks</h2>
+
+<a href="/admin/task/add"<button class="btn btn-success">add task</button></a>
+
+
+{{#each tasks}}
+    <div class="card mt-4">
+        <div class="card-body">
+            <h4>{{seccao}}</h4>
+            <small>{{trabalho}}</small><br>
+            <small>{{cliente}}</small><br>
+            <small>{{data}}</small>
+            <br>
+            <a href="/admin/task/edit/{{_id}}"><button class="btn btn-success mt-3">Editar</button></a>
+            <form action="/admin/task/delete" method="POST">
+                <input type="hidden" name="id" value="{{_id}}">
+                <button type="submit" class="btn btn-danger mt-3 ">Apagar</button>
+            </form>
+        
+        </div>
+    </div>
+
+{{else}}
+<br><h4 class="mt-4 text-white">Sem tasks para mostrar</h4>
+
+{{/each}}
+
+

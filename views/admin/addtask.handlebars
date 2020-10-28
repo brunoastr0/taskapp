@@ -1,0 +1,40 @@
+{{#each errors}}
+
+<div class="alert alert-danger">{{text}}</div>
+
+{{else}}
+
+{{/each}}
+
+<h3 style="color: white;">Nova Task: </h3>
+
+<div class="card bg-transparent border-white">
+    <div class="card-body">
+    <label for="task" style="color: white;">Secçao: </label>
+    <form method="POST" action="/admin/task/nova">
+
+<select id="selectBox" class="custom-select" onchange="updatechar()" name="seccao">
+    <option selected >Selecione</option>
+    <option value="Serigrafia" >Serigrafia</option>
+    <option value="Plotter" >Plotter</option>
+    <option value="Design" >Design</option>
+    <option value="Front-Office" >Front-Office</option>
+    <option value="Grafica" >Grafica</option>
+</select>
+
+    <label for="task" style="color: white;">Trabalho: </label>
+        <input type="text" id="task" name="task" placeholder="task" class="form-control">
+        <br>
+
+    <label for="cliente" style="color: white;">Cliente: </label>
+        <input type="text" id="cliente" name="cliente" placeholder="cliente" class="form-control">
+        <br>
+
+    <label for="time" style="color: white;">Hora: </label>
+        <input type="datetime-local" id="time" name="time" placeholder="hora" class="form-control">
+        <br>
+    <button type="submit" class="btn btn-success">Adicionar Task</button>
+</form>
+</div>
+</div>
+

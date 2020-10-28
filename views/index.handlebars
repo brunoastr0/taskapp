@@ -1,0 +1,55 @@
+<hr>
+<h2>Tarefas a decorrer:</h2><br>
+
+
+{{#each tasks }}
+
+<a href="/show/{{_id}}">
+
+
+  <div id="seccao">{{seccao}}</div>
+  
+
+  <div class="group pert">
+
+    <div id="coluna1">{{trabalho}}</div>
+    <div id="coluna2">{{cliente}}</div>
+    <div id="coluna3">{{data}}</div>
+    <!-- <div id="coluna3"></div>-->
+    <div id="coluna4"></div>
+    <br>
+  </div>
+
+
+</a>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Trabalho terminado?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Nao</button>
+        <button type="button" class="btn btn-success" id="timerStop">Sim</button>
+      </div>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+{{else}}
+<p>Nenhuma task</p>
+
+{{/each}}

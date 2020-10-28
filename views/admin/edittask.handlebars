@@ -1,0 +1,37 @@
+{{#each errors}}
+
+<div class="alert alert-danger">{{text}}</div>
+
+{{else}}
+
+{{/each}}
+
+<h3>Editar categoria: </h3>
+<div class="card">
+    <div class="card-body">
+    <form method="POST" action="/admin/task/edit">
+   <select id="selectBox" class="custom-select" onchange="updatechar()" name="seccao" >
+    <option selected >{{tasks.seccao}}</option>
+    <option value="Serigrafia" >Serigrafia</option>
+    <option value="Plotter" >Plotter</option>
+    <option value="Design" >Design</option>
+    <option value="Front-Office" >Front-Office</option>
+    <option value="Grafica" >Grafica</option>
+</select>
+
+    <label for="task" style="color: white;">Trabalho: </label>
+        <input type="text" id="task" name="task" placeholder="task" class="form-control" value="{{tasks.trabalho}}">
+        <br>
+
+    <label for="cliente" style="color: white;">Cliente: </label>
+        <input type="text" id="cliente" name="cliente" placeholder="cliente" class="form-control" value="{{tasks.cliente}}">
+        <br>
+
+    <label for="time" style="color: white;">Hora: </label>
+        <input type="datetime" id="time" name="time" placeholder="hora" class="form-control" value="{{tasks.data}}">
+        <br>
+    <button type="submit" class="btn btn-success">Editar Task</button>
+</form>
+</div>
+</div>
+
