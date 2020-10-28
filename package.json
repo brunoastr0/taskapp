@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
+  "engines": {
+    "node": "12.x"
+  },
   "scripts": {
   "dev": "react-scripts start",
   "start": "serve -s build",
