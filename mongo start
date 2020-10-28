@@ -1,3 +1,0 @@
-sudo systemctl start mongod /*to sart the mongodb*/
-node app.js /*to start the app*/
-
