@@ -1,7 +1,6 @@
 {
   "name": "task_project",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
   "dependencies": {
     "body-parser": "^1.19.0",
@@ -16,6 +15,9 @@
     "sequelize": "^6.3.4",
     "serve": "^11.3.2"
   },
+  "engines": {
+    "node": "10.x"
+  },
   "devDependencies": {},
   "scripts": {
     "dev": "react-scripts start",
@@ -26,5 +28,6 @@
     "heroku-postbuild": "npm run build"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "description": ""
 }
