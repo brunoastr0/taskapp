@@ -1,5 +1,5 @@
 {
-  "name": "task_project",
+  "name": "taskappb",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
@@ -8,8 +8,8 @@
   },
   "scripts": {
 
-  "start": "node app.js",
-  "heroku-postbuild": "npm run build"
+  "start": "node app.js"
+  
 },
   "author": "",
   "license": "ISC"
