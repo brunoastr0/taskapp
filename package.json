@@ -7,11 +7,8 @@
     "node": "12.x"
   },
   "scripts": {
-  "dev": "node-scripts start",
-  "start": "npm start",
-  "build": "node-scripts build",
-  "test": "node-scripts test --env=jsdom",
-  "eject": "node-scripts eject",
+
+  "start": "node app.js",
   "heroku-postbuild": "npm run build"
 },
   "author": "",
