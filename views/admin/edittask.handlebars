@@ -19,6 +19,8 @@
     <option value="Grafica" >Grafica</option>
 </select>
 
+    <input type="hidden" name="id" value="{{tasks._id}}">
+
     <label for="task" style="color: white;">Trabalho: </label>
         <input type="text" id="task" name="task" placeholder="task" class="form-control" value="{{tasks.trabalho}}">
         <br>
@@ -28,7 +30,7 @@
         <br>
 
     <label for="time" style="color: white;">Hora: </label>
-        <input type="datetime" id="time" name="time" placeholder="hora" class="form-control" value="{{tasks.data}}">
+        <input type="datetime-local" id="time" name="time" placeholder="hora" class="form-control" value="{{tasks.data}}">
         <br>
     <button type="submit" class="btn btn-success">Editar Task</button>
 </form>

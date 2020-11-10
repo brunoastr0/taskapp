@@ -48,8 +48,10 @@ app.engine('handlebars', handlebars({
 }));
 app.set('view engine', 'handlebars'); //mongoose
 
-mongoose.Promise = global.Promise;
-mongoose.connect('mongodb+srv://taskapp:iwenttothebeach2020@cluster0.wccpn.mongodb.net/taskapp?retryWrites=true&w=majority').then(function () {
+mongoose.Promise = global.Promise; //const db = 'mongodb://localhost/taskapp'
+
+var db = 'mongodb+srv://taskapp:iwenttothebeach2020@cluster0.wccpn.mongodb.net/taskapp?retryWrites=true&w=majority';
+mongoose.connect(db).then(function () {
   console.log("database`s up");
 })["catch"](function (error) {
   console.log("error ao contecting to database; ".concat(error));

@@ -1,10 +1,10 @@
 <hr>
-<h2>Tarefas a decorrer:</h2><br>
+<h2 style="color: white;">Tarefas a decorrer:</h2><br>
 
 
 {{#each tasks }}
 
-<a href="/show/{{_id}}">
+<button class=" bg-transparent border-0" data-toggle="modal" data-target="#s{{_id}}">
 
 
   <div id="seccao">{{seccao}}</div>
@@ -19,9 +19,33 @@
     <div id="coluna4"></div>
     <br>
   </div>
+  </button>
 
+<div class="modal fade " id="s{{_id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Descriçao</h5>
+        
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="divis"><h5 >Seccao: {{seccao}}</h5></div>
+        <div class="divis"><h5 >trabalho: {{trabalho}}</h5></div>
+        <div class="divis"><h5 >cliente: {{cliente}}</h5></div>
+        
+       
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
 
-</a>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
@@ -53,3 +77,4 @@
 <p>Nenhuma task</p>
 
 {{/each}}
+

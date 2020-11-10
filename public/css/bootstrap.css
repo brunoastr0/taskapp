@@ -5,10 +5,10 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
  body{
-  background-image: url('../img/Fundo\ Designador\ de\ Tarefas.jpg');
+  background-image: url('../img/Fundo\ Designador\ de\ Tarefas+icon.png');
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: auto;
+  background-size: 2200px;
  }
  .container{
   display: flex;
@@ -32,7 +32,7 @@
    min-height: 50px;
    font-size: 20px;
    border:0px solid;
-   border-radius: 0px 0px 0px 20px;
+   border-radius: 0px 10px 10px 20px;
    padding: 5px;
    background-color: greenyellow;
    color: black;
@@ -145,6 +145,34 @@ div#coluna4{
   margin-top:-40px;
   margin-left: 800px;
   color: white;
+}
+
+.divis{
+  height: fit-content auto;
+  margin-left: 10px;
+  background-color: rgb(255, 250, 250);
+  padding: 10px;
+  position: relative;
+  display: block;
+  justify-content: space-around;
+  margin-top: 5px;
+  background-color: rgba(30, 54, 54, 0);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+.divis:hover
+{
+    box-shadow:
+    1px 1px #53a7ea,
+    2px 2px #53a7ea,
+    3px 3px #53a7ea;
+  -webkit-transform: translateX(-3px);
+  transform: translateX(-3px);
+}
+
+#foot{
+  margin-bottom: 0px;
 }
 :root {
   --blue: #007bff;

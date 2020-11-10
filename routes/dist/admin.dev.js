@@ -83,25 +83,17 @@ router.get('/task/edit/:id', function (req, res) {
     res.redirect('/admin/task');
   });
 });
-/*router.get('/show/:id',(req,res)=>{
-    Task.findOne({_id:req.params.id}).lean().then((tasks)=>{
-        res.render('taskShow',{tasks:tasks})
-    }).catch((error)=>{
-        req.flash("error_msg","Erro ao encontar a tarefa pretendida")
-        res.redirect('/')
-    })
-})*/
-
 router.post('/task/edit', function (req, res) {
   Task.findById(req.body.id).then(function (tasks) {
-    console.log();
     tasks.seccao = req.body.seccao;
     tasks.trabalho = req.body.task;
     tasks.cliente = req.body.cliente;
-    Task.save().then(function () {
+    tasks.data = req.body.time;
+    tasks.save().then(function () {
       req.flash("success_msg", "task editada com sucesso");
       res.redirect("/admin/task");
     })["catch"](function (error) {
+      console.log(error);
       req.flash('error_msg', 'houve um erro interno ao editar a task');
     });
   })["catch"](function (error) {

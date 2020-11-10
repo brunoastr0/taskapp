@@ -203,7 +203,7 @@ function state(){
                 e.textContent = "ok"
               })
         }
-        else if ((arr1[0]) == "-" && ((arr1[9]) =="-")) {
+        else if ((arr1[0]) == "-" || ((arr1[9]) =="-")) {
             
            estado = "ATRASADO"
            time.style.color = "red"

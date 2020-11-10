@@ -42,7 +42,9 @@ const Task = mongoose.model('task')
         
     //mongoose
     mongoose.Promise = global.Promise
-    mongoose.connect('mongodb+srv://taskapp:iwenttothebeach2020@cluster0.wccpn.mongodb.net/taskapp?retryWrites=true&w=majority').then(()=>{
+    //const db = 'mongodb://localhost/taskapp'
+    const db = 'mongodb+srv://taskapp:iwenttothebeach2020@cluster0.wccpn.mongodb.net/taskapp?retryWrites=true&w=majority'
+    mongoose.connect(db).then(()=>{
         console.log("database`s up")
     }).catch((error)=>{
         console.log(`error ao contecting to database; ${error}`)
